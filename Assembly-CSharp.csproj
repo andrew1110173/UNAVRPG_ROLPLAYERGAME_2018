@@ -62,13 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AttackMage.cs" />
-    <Compile Include="Assets\Scripts\Attacmage.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Core\ControlSystem.cs" />
     <Compile Include="Assets\Scripts\Core\GameManagerSystem.cs" />
+    <Compile Include="Assets\Scripts\Core\GroundSystem.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\Mage.cs" />
+    <Compile Include="Assets\Scripts\Projectile_Atack.cs" />
     <None Include="Assets\RPG_UNAV\Animations\Knight\Nuevo documento de texto.txt" />
     <None Include="Assets\RPG_UNAV\Animations\Archer\Nuevo documento de texto.txt" />
     <None Include="Assets\RPG_UNAV\Animator\Nuevo documento de texto.txt" />
