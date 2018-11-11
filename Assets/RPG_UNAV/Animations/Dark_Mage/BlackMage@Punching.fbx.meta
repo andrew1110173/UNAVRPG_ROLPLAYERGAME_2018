@@ -3,68 +3,68 @@ guid: 43f62626ca8a0f04abbf8c5cdbe1e838
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: default
-    100002: Mage:polySurface2
-    100004: mixamorig:Head
-    100006: mixamorig:HeadTop_End
-    100008: mixamorig:Hips
-    100010: mixamorig:LeftArm
-    100012: mixamorig:LeftFoot
-    100014: mixamorig:LeftForeArm
-    100016: mixamorig:LeftHand
-    100018: mixamorig:LeftLeg
-    100020: mixamorig:LeftShoulder
-    100022: mixamorig:LeftToe_End
-    100024: mixamorig:LeftToeBase
-    100026: mixamorig:LeftUpLeg
-    100028: mixamorig:Neck
-    100030: mixamorig:RightArm
-    100032: mixamorig:RightFoot
-    100034: mixamorig:RightForeArm
-    100036: mixamorig:RightHand
-    100038: mixamorig:RightLeg
-    100040: mixamorig:RightShoulder
-    100042: mixamorig:RightToe_End
-    100044: mixamorig:RightToeBase
-    100046: mixamorig:RightUpLeg
-    100048: mixamorig:Spine
-    100050: mixamorig:Spine1
-    100052: mixamorig:Spine2
-    100054: //RootNode
-    400000: default
-    400002: Mage:polySurface2
-    400004: mixamorig:Head
-    400006: mixamorig:HeadTop_End
-    400008: mixamorig:Hips
-    400010: mixamorig:LeftArm
-    400012: mixamorig:LeftFoot
-    400014: mixamorig:LeftForeArm
-    400016: mixamorig:LeftHand
-    400018: mixamorig:LeftLeg
-    400020: mixamorig:LeftShoulder
-    400022: mixamorig:LeftToe_End
-    400024: mixamorig:LeftToeBase
-    400026: mixamorig:LeftUpLeg
-    400028: mixamorig:Neck
-    400030: mixamorig:RightArm
-    400032: mixamorig:RightFoot
-    400034: mixamorig:RightForeArm
-    400036: mixamorig:RightHand
-    400038: mixamorig:RightLeg
-    400040: mixamorig:RightShoulder
-    400042: mixamorig:RightToe_End
-    400044: mixamorig:RightToeBase
-    400046: mixamorig:RightUpLeg
-    400048: mixamorig:Spine
-    400050: mixamorig:Spine1
-    400052: mixamorig:Spine2
-    400054: //RootNode
-    2100000: No Name
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: //RootNode
+    100002: default1
+    100004: Head
+    100006: HeadTop_End
+    100008: Hips
+    100010: LeftArm
+    100012: LeftFoot
+    100014: LeftForeArm
+    100016: LeftHand
+    100018: LeftLeg
+    100020: LeftShoulder
+    100022: LeftToe_End
+    100024: LeftToeBase
+    100026: LeftUpLeg
+    100028: Mage:polySurface2
+    100030: Neck
+    100032: RightArm
+    100034: RightFoot
+    100036: RightForeArm
+    100038: RightHand
+    100040: RightLeg
+    100042: RightShoulder
+    100044: RightToe_End
+    100046: RightToeBase
+    100048: RightUpLeg
+    100050: Spine
+    100052: Spine1
+    100054: Spine2
+    400000: //RootNode
+    400002: default1
+    400004: Head
+    400006: HeadTop_End
+    400008: Hips
+    400010: LeftArm
+    400012: LeftFoot
+    400014: LeftForeArm
+    400016: LeftHand
+    400018: LeftLeg
+    400020: LeftShoulder
+    400022: LeftToe_End
+    400024: LeftToeBase
+    400026: LeftUpLeg
+    400028: Mage:polySurface2
+    400030: Neck
+    400032: RightArm
+    400034: RightFoot
+    400036: RightForeArm
+    400038: RightHand
+    400040: RightLeg
+    400042: RightShoulder
+    400044: RightToe_End
+    400046: RightToeBase
+    400048: RightUpLeg
+    400050: Spine
+    400052: Spine1
+    400054: Spine2
+    2100000: phong1
+    2300000: default1
+    3300000: default1
+    4300000: default1
     4300002: Mage:polySurface2
-    7400000: mixamo.com
+    7400000: Take 001
     9500000: //RootNode
     13700000: Mage:polySurface2
     2186277476908879412: ImportLogs
@@ -72,7 +72,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
+      name: phong1
     second: {fileID: 2100000, guid: 88c044a87160f3947b5f82d74d987250, type: 2}
   materials:
     importMaterials: 1

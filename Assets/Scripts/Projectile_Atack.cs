@@ -4,8 +4,6 @@ using Core.ControlSystem;
 
 public class Projectile_Atack : MonoBehaviour {
 
-    protected Animator anim;
-
     [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
