@@ -37,22 +37,19 @@ namespace Core.ControlSystem
             t.Translate(new Vector3(FixedAxis.x, 0f, FixedAxis.y) * speed);
         }
 
-        public static bool Jump
+        public static bool Attack1
+        {
+            get
+            {
+                return Input.GetButtonDown("Fire1");
+            }
+        }
+
+        public static bool SpaceBar
         {
             get
             {
                 return Input.GetButtonDown("Jump");
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static bool FireAtack
-        {
-            get
-            {
-                return Input.GetButtonDown("FireAtack");
             }
         }
     }

@@ -2,43 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Core.ControlSystem;
-using Core.GroundSystem;
+using Core.TalkSystem.Lines;
 
 public abstract class Character : MonoBehaviour
 {
-    protected Animator anim;
-    protected Rigidbody rb;
-
     [SerializeField]
     protected int health = 5;
     [SerializeField]
     protected int maxHalth = 10;
     [SerializeField]
     protected float speed;
-    [SerializeField]
-    protected float JumpForce;
-    protected bool jumping;
-    protected bool magic_atack;
+
+    protected Animator anim;
 
     [SerializeField]
-    protected GroundSystem groundSystem;
-    protected bool grounding;
+    Lines lines;
 
-    private void Awake()
+    public float Speed
     {
-        anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        get
+        {
+            return speed;
+        }
     }
 
-    protected void FixedUpdate()
+    public Lines Lines
     {
-        Move();
-        Jump();
+        get
+        {
+            return lines;
+        }
+    }
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
     }
 
     protected void Update()
     {
-        Fire_Atack();
+        Move();
     }
 
     protected virtual void Move()
@@ -46,20 +49,8 @@ public abstract class Character : MonoBehaviour
         ControlSystem.Move(transform, speed);
     }
 
-    protected virtual void Jump(){}
-
-    protected virtual void Fire_Atack()
-    {
-
-    }
-
     protected virtual void Recover(int health)
     {
         this.health +=  this.health + health <= maxHalth  ? health : this.health - maxHalth;
-    }
-
-    protected virtual void OnDrawGizmos()
-    {
-        groundSystem.DrawRay(transform);
     }
 }
