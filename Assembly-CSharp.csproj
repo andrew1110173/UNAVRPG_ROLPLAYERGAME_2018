@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Animation Scripts\AttackMage\Spell.cs" />
     <Compile Include="Assets\Scripts\Animation Scripts\MoveCharacter.cs" />
     <Compile Include="Assets\Scripts\Archer.cs" />
+    <Compile Include="Assets\Scripts\AttackArcher.cs" />
     <Compile Include="Assets\Scripts\AttackMage.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Core\ControlSystem.cs" />

@@ -32,12 +32,12 @@ public class AttackMage : Mage
     {
         base.Update();
 
-        if (ControlSystem.Attack1)
+        if (ControlSystem.Attack1 && ImLeader)
         {
             Spell();
         }
 
-        if (ControlSystem.BasicAttack)
+        if (ControlSystem.BasicAttack && ImLeader)
         {
             BasicAttack();
         }

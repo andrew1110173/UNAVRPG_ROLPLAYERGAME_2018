@@ -1,27 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
-using Core.ControlSystem;
 
-public class Archer : Hero
+public abstract class Archer : Hero
 {
-    protected override void Move()
-    {
-        base.Move();
-        /*if (!imLeader && !canMoveAsAllie)
-        {
-            anim.SetTrigger("reset");
-            return;
-        }*/
-        if (ImLeader)
-        {
-            anim.SetFloat("move", Mathf.Abs(ControlSystem.Axis.magnitude));
-        }
-    }
+    protected int arrows;
 
-    new void Update()
-    {
-        base.Update();
-    }
+    protected abstract void Spell();
+    protected abstract void BasicAttack();
 }
 
