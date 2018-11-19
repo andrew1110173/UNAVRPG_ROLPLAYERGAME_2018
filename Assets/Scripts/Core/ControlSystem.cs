@@ -45,6 +45,14 @@ namespace Core.ControlSystem
             }
         }
 
+        public static bool BasicAttack
+        {
+            get
+            {
+                return Input.GetButtonDown("BasicAttack");
+            }
+        }
+
         public static bool SpaceBar
         {
             get

@@ -22,11 +22,6 @@ public class Archer : Hero
     new void Update()
     {
         base.Update();
-
-        if (ControlSystem.Attack1)
-        {
-            anim.SetTrigger("attack");
-        }
     }
 }
 

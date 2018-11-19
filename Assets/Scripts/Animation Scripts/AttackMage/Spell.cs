@@ -27,7 +27,7 @@ public class Spell : StateMachineBehaviour
             if(stateInfo.normalizedTime > 0.3f && attackOnce)
             {
                 attackOnce = false;
-                Instantiate(Resources.Load("Fireball", typeof(GameObject)), attackMage.SpellPoint.position, attackMage.SpellPoint.rotation);
+                Instantiate(Resources.Load("RayBall", typeof(GameObject)), attackMage.SpellPoint.position, attackMage.SpellPoint.rotation);
             }
         }
     }
