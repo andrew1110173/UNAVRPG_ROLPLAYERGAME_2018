@@ -12,6 +12,7 @@ public abstract class Hero : Character
     private bool imLeader = false;
 
     Transform partyLeader;
+    Transform other;
 
     private bool canMoveAsAllie = false;
 
@@ -43,7 +44,21 @@ public abstract class Hero : Character
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
                 transform.LookAt(partyLeader);
+                float dist = Vector3.Distance(transform.position, partyLeader.position);
+                //Debug.Log("Distance to other: " + dist);
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("He chocado :C");
+        var left = Vector3.Distance(transform.position, collision.transform.position) > 1.2f;
+        var right = Vector3.Distance(transform.position, collision.transform.position) > 1.2f;
+        if(left&&right)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.LookAt(partyLeader);
         }
     }
 

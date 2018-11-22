@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spell : StateMachineBehaviour
+public class Spell_DarkMage : StateMachineBehaviour
 {
     AttackMage attackMage;
     bool attackOnce = true;
