@@ -12,6 +12,9 @@ namespace Core.PartySystem
         [SerializeField]
         Hero leader;
 
+        int SelectHero = 0;
+        int partyLenght = 0;
+
         public List<Hero> Party
         {
             get
@@ -31,12 +34,26 @@ namespace Core.PartySystem
         public void StartParty()
         {
             Hero[] heroes = GameObject.FindObjectsOfType<Hero>();
-            foreach(Hero hero in heroes)
-            {
-                party.Add(hero);
-            }
 
-            leader = heroes[0];
+                foreach (Hero hero in heroes)
+                {
+                    party.Add(hero);
+                    partyLenght++;
+                }
+
+            leader = heroes[SelectHero];
+        }
+
+        public void ChangeHero()
+        {
+            Hero[] heroes = GameObject.FindObjectsOfType<Hero>();
+
+            if (SelectHero < (partyLenght-1))
+                SelectHero++;
+            else if (SelectHero == (partyLenght - 1))
+                SelectHero = 0;
+
+            leader = heroes[SelectHero];
         }
     }
 }

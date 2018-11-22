@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Core.PartySystem;
+using Core.ControlSystem;
 using Core.TalkSystem.TextBoxManager;
 
 public class GameManager : MonoBehaviour
@@ -27,6 +28,14 @@ public class GameManager : MonoBehaviour
         partySystem.StartParty();
     }
 
+    private void Update()
+    {
+        if (ControlSystem.ChangeHero)
+        {
+            ChangeHero();
+        }
+    }
+
     public PartySystem PartySystem
     {
         get
@@ -41,6 +50,11 @@ public class GameManager : MonoBehaviour
         {
             return textBoxManager;
         }
+    }
+
+    public void ChangeHero()
+    {
+        partySystem.ChangeHero();
     }
 }
 

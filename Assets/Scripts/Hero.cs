@@ -23,6 +23,10 @@ public abstract class Hero : Character
 
     protected override void Move()
     {
+        //Update partyLeader
+        partyLeader = GameManager.instance.PartySystem.Leader.transform;
+        imLeader = this == partyLeader.GetComponent<Hero>();
+
         if (imLeader)
         {
             transform.Translate(Vector3.forward * ControlSystem.Axis.magnitude * speed * Time.deltaTime);

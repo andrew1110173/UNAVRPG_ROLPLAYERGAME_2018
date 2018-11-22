@@ -37,6 +37,14 @@ namespace Core.ControlSystem
             t.Translate(new Vector3(FixedAxis.x, 0f, FixedAxis.y) * speed);
         }
 
+        public static bool ChangeHero
+        {
+            get
+            {
+                return Input.GetButtonDown("ChangeHero");
+            }
+        }
+
         public static bool Attack1
         {
             get

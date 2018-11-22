@@ -53,4 +53,9 @@ public abstract class Character : MonoBehaviour
     {
         this.health +=  this.health + health <= maxHalth  ? health : this.health - maxHalth;
     }
+
+    protected virtual void ChangeHeroe()
+    {
+        
+    }
 }
