@@ -42,18 +42,47 @@ namespace Core.PartySystem
                 }
 
             leader = heroes[SelectHero];
+
+            StartFollow();
+        }
+
+        public void StartFollow()
+        {
+            for (int index = 0; index < party.Count; index++)
+            {
+                //vas a seguir a alguien
+                if (party[index] != leader)
+                {
+                    //sigo a quien este delante de mi osea el index que va menos 1, porque es una lista.
+                    party[index].Target = party[index - 1].transform;
+                }
+            }
         }
 
         public void ChangeHero()
         {
-            Hero[] heroes = GameObject.FindObjectsOfType<Hero>();
 
-            if (SelectHero < (partyLenght-1))
-                SelectHero++;
-            else if (SelectHero == (partyLenght - 1))
-                SelectHero = 0;
+            List<Hero> currentHeroes = new List<Hero>();
+            foreach(Hero h in party)
+            {
+                currentHeroes.Add(h);
+            }
+            party.Clear();
 
-            leader = heroes[SelectHero];
+            foreach(Hero h in currentHeroes)
+            {
+                if(h != leader)
+                {
+                    party.Add(h);
+                }
+            }
+
+            party.Add(leader);
+
+            leader = party[0];
+
+            StartFollow();
+
         }
     }
 }

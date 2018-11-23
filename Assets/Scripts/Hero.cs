@@ -10,9 +10,10 @@ public abstract class Hero : Character
     protected Sprite icon;
     [SerializeField]
     private bool imLeader = false;
-    bool beingFollowed = false;
+    //bool beingFollowed = false;
 
     Transform partyLeader;
+    [SerializeField]
     Transform target;
 
     private bool canMoveAsAllie = false;
@@ -40,20 +41,11 @@ public abstract class Hero : Character
         }
         else
         {
-            canMoveAsAllie = Vector3.Distance(transform.position, partyLeader.position) > 1.2f;
+            canMoveAsAllie = Vector3.Distance(transform.position, target.position) > 1.2f;
             if (canMoveAsAllie)
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                //transform.LookAt(partyLeader);
-                for (int i = 1; i < GameManager.instance.PartySystem.Party.Count;i++)
-                {
-                    if(!GameManager.instance.PartySystem.Party[i - 1].BeingFollowed)
-                    {
-                        GameManager.instance.PartySystem.Party[i - 1].BeingFollowed = true;
-                        transform.LookAt(GameManager.instance.PartySystem.Party[i - 1].transform);
-                    }
-                    
-                }
+                transform.LookAt(target);
             }
         }
     }
@@ -88,7 +80,20 @@ public abstract class Hero : Character
         }
     }
 
-    public bool BeingFollowed
+    public Transform Target
+    {
+        get
+        {
+            return target;
+        }
+
+        set
+        {
+            target = value;
+        }
+    }
+
+    /*public bool BeingFollowed
     {
         get
         {
@@ -99,5 +104,5 @@ public abstract class Hero : Character
         {
             beingFollowed = value;
         }
-    }
+    }*/
 }
