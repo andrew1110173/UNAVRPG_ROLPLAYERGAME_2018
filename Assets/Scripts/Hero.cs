@@ -10,9 +10,10 @@ public abstract class Hero : Character
     protected Sprite icon;
     [SerializeField]
     private bool imLeader = false;
+    bool beingFollowed = false;
 
     Transform partyLeader;
-    Transform other;
+    Transform target;
 
     private bool canMoveAsAllie = false;
 
@@ -43,24 +44,20 @@ public abstract class Hero : Character
             if (canMoveAsAllie)
             {
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
-                transform.LookAt(partyLeader);
-                float dist = Vector3.Distance(transform.position, partyLeader.position);
-                //Debug.Log("Distance to other: " + dist);
+                //transform.LookAt(partyLeader);
+                for (int i = 1; i < GameManager.instance.PartySystem.Party.Count;i++)
+                {
+                    if(!GameManager.instance.PartySystem.Party[i - 1].BeingFollowed)
+                    {
+                        GameManager.instance.PartySystem.Party[i - 1].BeingFollowed = true;
+                        transform.LookAt(GameManager.instance.PartySystem.Party[i - 1].transform);
+                    }
+                    
+                }
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("He chocado :C");
-        var left = Vector3.Distance(transform.position, collision.transform.position) > 1.2f;
-        var right = Vector3.Distance(transform.position, collision.transform.position) > 1.2f;
-        if(left&&right)
-        {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            transform.LookAt(partyLeader);
-        }
-    }
 
     //[SerializeField]
     //Inventory inventory;
@@ -88,6 +85,19 @@ public abstract class Hero : Character
         get
         {
             return imLeader;
+        }
+    }
+
+    public bool BeingFollowed
+    {
+        get
+        {
+            return beingFollowed;
+        }
+
+        set
+        {
+            beingFollowed = value;
         }
     }
 }

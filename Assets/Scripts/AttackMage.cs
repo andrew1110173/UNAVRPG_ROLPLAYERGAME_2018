@@ -26,6 +26,7 @@ public class AttackMage : Mage
         {
             anim.SetFloat("move", Mathf.Abs(ControlSystem.Axis.magnitude));
         }
+        
     }
 
     new void Update()
