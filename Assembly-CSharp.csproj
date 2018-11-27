@@ -71,7 +71,9 @@
     <Compile Include="Assets\Scripts\AttackWhiteMage.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\Core\ControlSystem.cs" />
+    <Compile Include="Assets\Scripts\Core\GameData.cs" />
     <Compile Include="Assets\Scripts\Core\GameManagerSystem.cs" />
+    <Compile Include="Assets\Scripts\Core\MemorySystem.cs" />
     <Compile Include="Assets\Scripts\Core\PartySystem.cs" />
     <Compile Include="Assets\Scripts\Core\TalkSystem\Lines.cs" />
     <Compile Include="Assets\Scripts\Core\TalkSystem\TalkSystem.cs" />
@@ -79,28 +81,46 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\Mage.cs" />
+    <Compile Include="Assets\Scripts\Navigation\MainMenu.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Powers\Fireball.cs" />
     <Compile Include="Assets\Scripts\TalkingBox.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Shaders\Additive_Base.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\RPG_UNAV\Animations\Knight\Nuevo documento de texto.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Cinemachine">
       <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/HelloImZomi/Documents/Unity/UNAVRPG_ROLPLAYERGAME_2018/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

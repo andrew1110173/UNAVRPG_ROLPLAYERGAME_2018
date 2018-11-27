@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Core.ControlSystem;
+using Core.MemorySystem;
 
 public abstract class Hero : Character
 {
@@ -10,7 +11,7 @@ public abstract class Hero : Character
     protected Sprite icon;
     [SerializeField]
     private bool imLeader = false;
-    //bool beingFollowed = false;
+
 
     Transform partyLeader;
     [SerializeField]
@@ -50,6 +51,15 @@ public abstract class Hero : Character
         }
     }
 
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.name =="CheckPoint")
+        {
+            Debug.Log("Partida Guardada");
+            MemorySystem.Save(new GameData(transform.position.x, transform.position.z),"000.nose");
+        }
+    }
 
     //[SerializeField]
     //Inventory inventory;
