@@ -19,10 +19,15 @@ public abstract class Hero : Character
 
     private bool canMoveAsAllie = false;
 
+    GameData gd;
+
     private void Start()
     {
         partyLeader = GameManager.instance.PartySystem.Leader.transform;
         imLeader = this == partyLeader.GetComponent<Hero>();
+        gd = MemorySystem.Load;
+        if(imLeader)
+        transform.position = gd.PlayerPosition;
     }
 
     protected override void Move()
@@ -54,10 +59,10 @@ public abstract class Hero : Character
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.name =="CheckPoint")
+        if(collision.collider.name =="CheckPoint" && imLeader)
         {
             Debug.Log("Partida Guardada");
-            MemorySystem.Save(new GameData(transform.position.x, transform.position.z),"000.nose");
+            MemorySystem.Save(new GameData(transform.position.x, transform.position.z));
         }
     }
 
