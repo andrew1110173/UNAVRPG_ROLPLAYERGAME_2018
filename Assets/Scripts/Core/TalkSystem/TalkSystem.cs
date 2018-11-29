@@ -21,13 +21,20 @@ namespace Core.TalkSystem
         public static void StartConversation(List<Character> characters, Text text)
         {
             textContent = text;
+            bool NPCturn = true;
+            Character data = null;
+            
             foreach (Character c in characters)
             {
+                data = c;
                 foreach(string s in c.Lines.DialogLines)
                 {
                     conversation.Add(s);
+                    Debug.Log(s);
                 }
             }
+            
+            Debug.Log(data);
 
             conversationStarted = true;
         }

@@ -65,7 +65,7 @@ namespace Core.ControlSystem
         {
             get
             {
-                return Input.GetButtonDown("Jump");
+                return Input.GetButtonDown("Talk");
             }
         }
     }
