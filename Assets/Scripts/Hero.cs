@@ -9,9 +9,10 @@ public abstract class Hero : Character
     protected string lore;
     [SerializeField]
     protected Sprite icon;
+    /*
     [SerializeField]
-    private bool imLeader = false;
-
+    private new bool imLeader = false;
+    */
 
     Transform partyLeader;
     [SerializeField]
@@ -87,7 +88,7 @@ public abstract class Hero : Character
         }
     }
 
-    public bool ImLeader
+    public new bool ImLeader
     {
         get
         {

@@ -12,6 +12,8 @@ public abstract class Character : MonoBehaviour
     protected int maxHalth = 10;
     [SerializeField]
     protected float speed;
+    [SerializeField]
+    protected bool imLeader = false;
 
     protected Animator anim;
 
@@ -31,6 +33,14 @@ public abstract class Character : MonoBehaviour
         get
         {
             return lines;
+        }
+    }
+
+    public bool ImLeader
+    {
+        get
+        {
+            return imLeader;
         }
     }
 
