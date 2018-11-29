@@ -12,64 +12,29 @@ namespace Core.TalkSystem
     {
 
         static List<string> conversation = new List<string>();
-        static List<string> NpcDialog = new List<string>();
-        static List<string> HeroDialog = new List<string>();
         static Text textContent;
 
         static bool conversationStarted = false;
 
         static int index = 0;
-        static bool NPCTurn = true;
 
         public static void StartConversation(List<Character> characters, Text text)
         {
             textContent = text;
-
-            /*
+            bool NPCturn = true;
+            Character data = null;
+            
             foreach (Character c in characters)
             {
+                data = c;
                 foreach(string s in c.Lines.DialogLines)
                 {
                     conversation.Add(s);
+                    Debug.Log(s);
                 }
             }
-            */
-
-            /*
-            foreach (Character c in characters)
-            {
-                foreach (string s in c.Lines.DialogLines)
-                {
-                    conversation.Add(s);
-                }
-            }
-            */
-            foreach(Character c in characters)
-            {
-                if (NPCTurn)
-                {
-                    foreach (string s in c.Lines.DialogLines)
-                    {
-                        NpcDialog.Add(s);
-                    }
-                    NPCTurn = false;
-                }else
-                {
-                    foreach (string s in c.Lines.DialogLines)
-                    {
-                        HeroDialog.Add(s);
-                    }
-                }     
-            }
-
-            int dialogSize = NpcDialog.Count + HeroDialog.Count/2;
-            for(int index = 0;index < dialogSize -1;index++ )
-            {
-                if(NpcDialog[index]!="")
-                conversation.Add(NpcDialog[index]);
-                if (HeroDialog[index] != "")
-                conversation.Add(HeroDialog[index]);
-            }
+            
+            Debug.Log(data);
 
             conversationStarted = true;
         }
@@ -82,7 +47,7 @@ namespace Core.TalkSystem
 
                 if (ControlSystem.SpaceBar)
                 {
-                    if (index + 1 < conversation.Count-1)
+                    if (index + 1 < conversation.Count - 1)
                     {
                         index++;
                     }
@@ -93,7 +58,6 @@ namespace Core.TalkSystem
                         textContent.text = "";
                         textContent.text = null;
                         container.SetActive(false);
-                        Debug.Log("End Chat");
                     }
                 }
             }
