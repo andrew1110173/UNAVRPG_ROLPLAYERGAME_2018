@@ -8,7 +8,6 @@ public class NPC : Character
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hola w :v");
         if (other.GetComponent<Hero>())
         {
             Character currentHero = other.GetComponent<Character>();

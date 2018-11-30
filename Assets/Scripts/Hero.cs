@@ -60,7 +60,8 @@ public abstract class Hero : Character
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.name =="CheckPoint" && imLeader)
+        Debug.Log("Chocaste w");
+        if (collision.collider.name =="CheckPoint" && imLeader)
         {
             Debug.Log("Partida Guardada");
             MemorySystem.Save(new GameData(transform.position.x, transform.position.z));
