@@ -29,6 +29,7 @@ public abstract class Hero : Character
         gd = MemorySystem.Load;
         if(imLeader)
         transform.position = gd.PlayerPosition;
+        Debug.Log(gd.PlayerName);
     }
 
     protected override void Move()
@@ -60,11 +61,15 @@ public abstract class Hero : Character
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Chocaste w");
         if (other.name =="CheckPoint" && imLeader)
         {
             Debug.Log("Partida Guardada");
-            MemorySystem.Save(new GameData(transform.position.x, transform.position.z));
+
+            var data = new System.Collections.Generic.Dictionary<string, string>();
+            data["PosX"] = transform.position.x.ToString();
+            data["PosZ"] = transform.position.z.ToString();
+            data["Hero"] = transform.name;
+            MemorySystem.Save(new GameData(data));
         }
     }
 

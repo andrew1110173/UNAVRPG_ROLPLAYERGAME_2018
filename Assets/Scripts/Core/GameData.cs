@@ -9,13 +9,16 @@ public class GameData
     float posX;
     [SerializeField]
     float posZ;
+    [SerializeField]
+    string HeroName;
 
     public GameData() { }
 
-    public GameData(float posX, float posZ)
+    public GameData(Dictionary<string, string> data)
     {
-        this.posX = posX;
-        this.posZ = posZ;
+        this.posX = float.Parse(data["PosX"]);
+        this.posZ = float.Parse(data["PosZ"]);
+        this.HeroName = data["Hero"];
     }
 
     public Vector3 PlayerPosition
@@ -23,6 +26,14 @@ public class GameData
         get
         {
             return new Vector3(posX, 0, posZ);
+        }
+    }
+
+    public string PlayerName
+    {
+        get
+        {
+            return HeroName;
         }
     }
 }
