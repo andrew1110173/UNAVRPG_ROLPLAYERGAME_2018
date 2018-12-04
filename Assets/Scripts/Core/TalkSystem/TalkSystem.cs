@@ -12,30 +12,20 @@ namespace Core.TalkSystem
     {
 
         static List<string> conversation = new List<string>();
+        static List<string> NpcDialog = new List<string>();
+        static List<string> HeroDialog = new List<string>();
         static Text textContent;
 
         static bool conversationStarted = false;
 
         static int index = 0;
         static int dialogSize = 0;
+        static bool dialogCount = true; //Valida que solo 1 vez se guarde el tamaño del dialogo y no se incremente
 
         public static void StartConversation(List<Character> characters, Text text)
         {
-            List<string> NpcDialog = new List<string>();
-            List<string> HeroDialog = new List<string>();
-
             textContent = text;
             bool NPCTurn = true;
-
-            /*
-            foreach (Character c in characters)
-            {
-                foreach(string s in c.Lines.DialogLines)
-                {
-                    conversation.Add(s);
-                }
-            }
-            */
 
             foreach (Character c in characters)
             {
@@ -56,9 +46,9 @@ namespace Core.TalkSystem
                 }     
             }
 
-            DialogSize = (NpcDialog.Count + HeroDialog.Count) / 2;
+            dialogSize = (dialogCount) ? (NpcDialog.Count + HeroDialog.Count) / 2 : dialogSize; dialogCount = false; ;
 
-            for (int index = 0;index < DialogSize;index++ )
+            for (int index = 0;index < dialogSize;index++ )
             {
                     if (NpcDialog[index] != "")
                     {
@@ -69,9 +59,8 @@ namespace Core.TalkSystem
                         conversation.Add(HeroDialog[index]);
                     }
             }
-
             conversationStarted = true;
-            Index = 1;
+            Index = 0;
         }
 
         public static void Talking(GameObject container)
@@ -86,18 +75,16 @@ namespace Core.TalkSystem
                     if (index + 1 < conversation.Count - 1)
                     {
                         index++;
-                        Debug.Log((index + 1)+" "+(conversation.Count));
                     }
                     else
                     {
                         conversationStarted = false;
                         conversation.Clear();
-                        conversation.TrimExcess();
+                        NpcDialog.Clear();
+                        HeroDialog.Clear();
                         textContent.text = "";
                         textContent.text = null;
                         container.SetActive(false);
-                        Debug.Log("\nCount: {0}" + conversation.Count);
-                        Debug.Log("Capacity: {0}"+ conversation.Capacity);
                     }
                 }
             }
@@ -113,19 +100,6 @@ namespace Core.TalkSystem
             set
             {
                 index = value;
-            }
-        }
-
-        public static int DialogSize
-        {
-            get
-            {
-                return dialogSize;
-            }
-
-            set
-            {
-                dialogSize = value;
             }
         }
     }
