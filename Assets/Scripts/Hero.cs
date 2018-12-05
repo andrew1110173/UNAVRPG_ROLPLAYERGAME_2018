@@ -2,6 +2,7 @@
 using UnityEngine;
 using Core.ControlSystem;
 using Core.MemorySystem;
+using System.Collections.Generic;
 
 public abstract class Hero : Character
 {
@@ -26,10 +27,10 @@ public abstract class Hero : Character
     {
         partyLeader = GameManager.instance.PartySystem.Leader.transform;
         imLeader = this == partyLeader.GetComponent<Hero>();
-        gd = MemorySystem.Load;
+        /*gd = MemorySystem.Load("");
         if(imLeader)
         transform.position = gd.PlayerPosition;
-        Debug.Log(gd.PlayerName);
+        Debug.Log(gd.PlayerName);*/
     }
 
     protected override void Move()
@@ -65,7 +66,7 @@ public abstract class Hero : Character
         {
             Debug.Log("Partida Guardada");
 
-            var data = new System.Collections.Generic.Dictionary<string, string>();
+            var data = new Dictionary<string, string>();
             data["PosX"] = transform.position.x.ToString();
             data["PosZ"] = transform.position.z.ToString();
             data["Hero"] = transform.name;

@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TextBoxManager textBoxManager;
 
+    [SerializeField]
+    GameData currentGameData;
+
     void Awake()
     {
         if (!instance)
@@ -25,15 +28,15 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
 
-        partySystem.StartParty();
+        //partySystem.StartParty();
     }
 
     private void Update()
     {
-        if (ControlSystem.ChangeHero)
+        /*if (ControlSystem.ChangeHero)
         {
             ChangeHero();
-        }
+        }*/
     }
 
     public PartySystem PartySystem
@@ -49,6 +52,19 @@ public class GameManager : MonoBehaviour
         get
         {
             return textBoxManager;
+        }
+    }
+
+    public GameData CurrentGameData
+    {
+        get
+        {
+            return currentGameData;
+        }
+
+        set
+        {
+            currentGameData = value;
         }
     }
 
