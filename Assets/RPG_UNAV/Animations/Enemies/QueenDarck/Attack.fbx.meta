@@ -4,70 +4,64 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: default
-    100004: mixamorig:Head
-    100006: mixamorig:HeadTop_End
-    100008: mixamorig:Hips
-    100010: mixamorig:LeftArm
-    100012: mixamorig:LeftFoot
-    100014: mixamorig:LeftForeArm
-    100016: mixamorig:LeftHand
-    100018: mixamorig:LeftLeg
-    100020: mixamorig:LeftShoulder
-    100022: mixamorig:LeftToe_End
-    100024: mixamorig:LeftToeBase
-    100026: mixamorig:LeftUpLeg
-    100028: mixamorig:Neck
-    100030: mixamorig:RightArm
-    100032: mixamorig:RightFoot
-    100034: mixamorig:RightForeArm
-    100036: mixamorig:RightHand
-    100038: mixamorig:RightLeg
-    100040: mixamorig:RightShoulder
-    100042: mixamorig:RightToe_End
-    100044: mixamorig:RightToeBase
-    100046: mixamorig:RightUpLeg
-    100048: mixamorig:Spine
-    100050: mixamorig:Spine1
-    100052: mixamorig:Spine2
-    100054: pCube9
+    100002: Head
+    100004: HeadTop_End
+    100006: Hips
+    100008: LeftArm
+    100010: LeftFoot
+    100012: LeftForeArm
+    100014: LeftHand
+    100016: LeftLeg
+    100018: LeftShoulder
+    100020: LeftToe_End
+    100022: LeftToeBase
+    100024: LeftUpLeg
+    100026: Neck
+    100028: pCube9
+    100030: RightArm
+    100032: RightFoot
+    100034: RightForeArm
+    100036: RightHand
+    100038: RightLeg
+    100040: RightShoulder
+    100042: RightToe_End
+    100044: RightToeBase
+    100046: RightUpLeg
+    100048: Spine
+    100050: Spine1
+    100052: Spine2
     400000: //RootNode
-    400002: default
-    400004: mixamorig:Head
-    400006: mixamorig:HeadTop_End
-    400008: mixamorig:Hips
-    400010: mixamorig:LeftArm
-    400012: mixamorig:LeftFoot
-    400014: mixamorig:LeftForeArm
-    400016: mixamorig:LeftHand
-    400018: mixamorig:LeftLeg
-    400020: mixamorig:LeftShoulder
-    400022: mixamorig:LeftToe_End
-    400024: mixamorig:LeftToeBase
-    400026: mixamorig:LeftUpLeg
-    400028: mixamorig:Neck
-    400030: mixamorig:RightArm
-    400032: mixamorig:RightFoot
-    400034: mixamorig:RightForeArm
-    400036: mixamorig:RightHand
-    400038: mixamorig:RightLeg
-    400040: mixamorig:RightShoulder
-    400042: mixamorig:RightToe_End
-    400044: mixamorig:RightToeBase
-    400046: mixamorig:RightUpLeg
-    400048: mixamorig:Spine
-    400050: mixamorig:Spine1
-    400052: mixamorig:Spine2
-    400054: pCube9
-    2100000: No Name
-    2300000: default
-    3300000: default
-    4300000: default
-    4300002: pCube9
-    7400000: mixamo.com
+    400002: Head
+    400004: HeadTop_End
+    400006: Hips
+    400008: LeftArm
+    400010: LeftFoot
+    400012: LeftForeArm
+    400014: LeftHand
+    400016: LeftLeg
+    400018: LeftShoulder
+    400020: LeftToe_End
+    400022: LeftToeBase
+    400024: LeftUpLeg
+    400026: Neck
+    400028: pCube9
+    400030: RightArm
+    400032: RightFoot
+    400034: RightForeArm
+    400036: RightHand
+    400038: RightLeg
+    400040: RightShoulder
+    400042: RightToe_End
+    400044: RightToeBase
+    400046: RightUpLeg
+    400048: Spine
+    400050: Spine1
+    400052: Spine2
+    2100000: phong1
+    4300000: pCube9
+    7400000: Take 001
     9500000: //RootNode
     13700000: pCube9
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
