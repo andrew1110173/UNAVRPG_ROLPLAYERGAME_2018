@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameData currentGameData;
 
+    private static bool startParty = false;
+
     void Awake()
     {
         if (!instance)
@@ -27,16 +29,20 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+    }
 
-        //partySystem.StartParty();
+    private void OnLevelWasLoaded(int level)
+    {
+        //Si entramos a la partida inicia el Party
+        if (level == 1) { partySystem.StartParty(); }
     }
 
     private void Update()
     {
-        /*if (ControlSystem.ChangeHero)
+        if (ControlSystem.ChangeHero)
         {
             ChangeHero();
-        }*/
+        }
     }
 
     public PartySystem PartySystem

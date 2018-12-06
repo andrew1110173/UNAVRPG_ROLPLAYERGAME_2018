@@ -63,8 +63,6 @@ namespace Core
             {
                 get
                 {
-                    //string path = Path.Combine();
-
                     List<string> games = new List<string>();
                     foreach(string game in Directory.GetFiles(Application.persistentDataPath + "/", "*.data"))
                     {

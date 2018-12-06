@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Core.MemorySystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameDataButton : MonoBehaviour
 {
@@ -45,5 +46,6 @@ public class GameDataButton : MonoBehaviour
         {
             GameManager.instance.CurrentGameData = MemorySystem.NewGame("GameSaved" + order.ToString(), buttonNameText);
         }
+        SceneManager.LoadScene(1);
     }
 }
