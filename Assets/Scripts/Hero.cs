@@ -116,6 +116,7 @@ public abstract class Hero : Character
         }
     }
 
+
     /*public bool BeingFollowed
     {
         get
