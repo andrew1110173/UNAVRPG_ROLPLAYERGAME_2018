@@ -219,7 +219,7 @@ Transform:
   m_LocalScale: {x: 1.0225345, y: 1.0225335, z: 1.0225335}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21790875
 GameObject:
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21790876}
   m_Layer: 0
-  m_Name: Edificio Reloj Medieval
+  m_Name: RelojMedieval
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,8 +248,62 @@ Transform:
   m_Children:
   - {fileID: 664164537}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &42655051
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 46.425
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 36.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_Name
+      value: DarkQueen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 762971d3c1883d244973208f7e0e22b9, type: 2}
+    - target: {fileID: 400004, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93503ee3f07cf444f99abf8faad643e6, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1001 &81249074
 Prefab:
   m_ObjectHideFlags: 0
@@ -432,6 +486,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &235190758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 93503ee3f07cf444f99abf8faad643e6,
+    type: 3}
+  m_PrefabInternal: {fileID: 42655051}
+--- !u!114 &235190759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235190758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03103ce0ea0f0514794096a9c78c2d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookRadius: 5
 --- !u!1 &272828824
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &295803153
 GameObject:
@@ -586,7 +657,7 @@ Transform:
   m_LocalScale: {x: 1.0225345, y: 1.0225335, z: 1.0225335}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315331166
 GameObject:
@@ -891,7 +962,7 @@ RectTransform:
   m_Children:
   - {fileID: 1401789205}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -981,7 +1052,7 @@ Transform:
   m_LocalScale: {x: 0.28587884, y: 1.4045272, z: 0.28587884}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &594623710
 Prefab:
@@ -1020,7 +1091,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: d690d4cfb814347428fc421d06b9838c, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: d690d4cfb814347428fc421d06b9838c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1215,7 +1286,7 @@ Transform:
   m_LocalScale: {x: 1.0225345, y: 1.0225335, z: 1.0225335}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &811668266
 GameObject:
@@ -1367,7 +1438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832282126}
   m_Layer: 0
-  m_Name: House2
+  m_Name: CasaMedieval_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1385,8 +1456,84 @@ Transform:
   m_Children:
   - {fileID: 1868866742}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1001 &844849879
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.747
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.316
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 319ad40d8d737f44aad08f2ef2535f74, type: 2}
+    - target: {fileID: 100070, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+      propertyPath: m_Name
+      value: Archer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 746ba28a7ad850e4e98c7c07f7bf7312, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!1 &844849880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100070, guid: 746ba28a7ad850e4e98c7c07f7bf7312,
+    type: 3}
+  m_PrefabInternal: {fileID: 844849879}
+--- !u!114 &844849881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 844849880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866b65a617a15d543937efbc327c9d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
+  maxHalth: 10
+  speed: 3
+  imLeader: 0
+  lines:
+    dialogLines: []
+  lore: 
+  icon: {fileID: 0}
+  target: {fileID: 0}
+  spellPoint: {fileID: 0}
 --- !u!1 &957160873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,7 +1617,7 @@ Transform:
   m_LocalScale: {x: 0.28587884, y: 1.4045272, z: 0.28587884}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975065827
 GameObject:
@@ -1557,7 +1704,7 @@ Transform:
   m_LocalScale: {x: 35.098625, y: 1, z: 59.231426}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052631419
 GameObject:
@@ -1665,7 +1812,7 @@ Transform:
   m_LocalScale: {x: 1.0225345, y: 1.0225335, z: 1.0225335}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077903945
 GameObject:
@@ -1746,12 +1893,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1077903945}
-  m_LocalRotation: {x: 0.3777405, y: -0.00000001593157, z: 0.000000006499507, w: 0.92591155}
+  m_LocalRotation: {x: 0.3777405, y: 0.000000015931601, z: -0.000000006499586, w: 0.92591155}
   m_LocalPosition: {x: 45.83, y: 5.54, z: 20.79007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1077903950
 MonoBehaviour:
@@ -2239,7 +2386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354054433}
   m_Layer: 0
-  m_Name: HouseModel2
+  m_Name: CasaMedieval_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2257,7 +2404,7 @@ Transform:
   m_Children:
   - {fileID: 435247715}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1401789204
 GameObject:
@@ -2366,7 +2513,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe9686bd4ce164d44ad0c9ddf3f9c6f7, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe9686bd4ce164d44ad0c9ddf3f9c6f7, type: 3}
       propertyPath: m_LocalScale.x
@@ -2379,6 +2526,10 @@ Prefab:
     - target: {fileID: 400000, guid: fe9686bd4ce164d44ad0c9ddf3f9c6f7, type: 3}
       propertyPath: m_LocalScale.z
       value: 482.38596
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fe9686bd4ce164d44ad0c9ddf3f9c6f7, type: 3}
+      propertyPath: m_Name
+      value: CasaMedieval_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe9686bd4ce164d44ad0c9ddf3f9c6f7, type: 3}
@@ -2421,7 +2572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   maxHalth: 10
-  speed: 2
+  speed: 3
   imLeader: 1
   lines:
     dialogLines: []
@@ -2487,13 +2638,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1648356929}
-  m_LocalRotation: {x: 0.3777405, y: -0.00000001593157, z: 0.000000006499507, w: 0.92591155}
+  m_LocalRotation: {x: 0.3777405, y: 0.000000015931601, z: -0.000000006499586, w: 0.92591155}
   m_LocalPosition: {x: 45.83, y: 5.54, z: 20.79007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 315331167}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690665750
 GameObject:
@@ -2504,7 +2655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1690665751}
   m_Layer: 0
-  m_Name: HouseModel1
+  m_Name: CasaMedieval_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2522,7 +2673,7 @@ Transform:
   m_Children:
   - {fileID: 1119617463}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1714178905
 Prefab:
@@ -2561,7 +2712,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
       propertyPath: m_LocalScale.x
@@ -2578,6 +2729,10 @@ Prefab:
     - target: {fileID: 400000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
+      propertyPath: m_Name
+      value: CasaMedieval_5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
@@ -2619,7 +2774,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: d690d4cfb814347428fc421d06b9838c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: d690d4cfb814347428fc421d06b9838c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2673,7 +2828,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: d690d4cfb814347428fc421d06b9838c, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400052, guid: d690d4cfb814347428fc421d06b9838c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2799,7 +2954,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400028, guid: d14951b5ae1303e4f822a67d2e8e1d09, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: d14951b5ae1303e4f822a67d2e8e1d09, type: 3}
       propertyPath: m_Controller
@@ -2849,7 +3004,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
       propertyPath: m_LocalScale.x
@@ -2869,7 +3024,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
       propertyPath: m_Name
-      value: CasaMedieval5 (1)
+      value: CasaMedieval_5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f763797ee80b70e4688ae56bdc6182fe, type: 3}
@@ -2911,7 +3066,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40c6fa5924633654abc05cdce5ea3697, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 40c6fa5924633654abc05cdce5ea3697, type: 3}
       propertyPath: m_Name
@@ -2986,7 +3141,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_LocalScale.x
@@ -3002,7 +3157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_Name
-      value: Casa4 (1)
+      value: CasaMedieval_4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3071,7 +3226,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1960137100
 Prefab:
@@ -3168,7 +3323,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_LocalScale.x
@@ -3181,6 +3336,10 @@ Prefab:
     - target: {fileID: 400000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
       propertyPath: m_LocalScale.z
       value: 313.96228
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d035e402d3bf95b42a03df053715c727, type: 3}
+      propertyPath: m_Name
+      value: CasaMedieval_4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d035e402d3bf95b42a03df053715c727, type: 3}

@@ -34,7 +34,10 @@ public class GameManager : MonoBehaviour
     private void OnLevelWasLoaded(int level)
     {
         //Si entramos a la partida inicia el Party
-        if (level == 1) { partySystem.StartParty(); }
+        if (level == 1)
+        {
+            partySystem.StartParty();
+        }
     }
 
     private void Update()

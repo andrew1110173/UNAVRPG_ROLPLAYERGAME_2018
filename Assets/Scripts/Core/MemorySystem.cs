@@ -30,8 +30,8 @@ namespace Core
                 BinaryFormatter bf = new BinaryFormatter();
 
                 Dictionary<string, string> data = new Dictionary<string, string>();
-                data["PosX"] = "250";
-                data["PosZ"] = "32";
+                data["PosX"] = "15";
+                data["PosZ"] = "10";
                 data["Hero"] = "El, cacas";
 
                 GameData newGameData = new GameData(data);

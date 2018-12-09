@@ -26,11 +26,12 @@ public abstract class Hero : Character
     private void Start()
     {
         partyLeader = GameManager.instance.PartySystem.Leader.transform;
+        gd = GameManager.instance.CurrentGameData;
+
         imLeader = this == partyLeader.GetComponent<Hero>();
-        /*gd = MemorySystem.Load("");
-        if(imLeader)
+        //Si soy lider, carga la posición del jugador
+        if (imLeader)
         transform.position = gd.PlayerPosition;
-        Debug.Log(gd.PlayerName);*/
     }
 
     protected override void Move()
