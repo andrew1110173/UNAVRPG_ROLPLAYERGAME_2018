@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameData currentGameData;
 
-    private static bool startParty = false;
+    GameObject virtualCamera;
 
     void Awake()
     {

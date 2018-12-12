@@ -31,7 +31,11 @@ public abstract class Hero : Character
         imLeader = this == partyLeader.GetComponent<Hero>();
         //Si soy lider, carga la posición del jugador
         if (imLeader)
-        transform.position = gd.PlayerPosition;
+        {
+            transform.position = gd.PlayerPosition;
+            transform.GetChild(0).gameObject.SetActive(true); //Si soy el lider activa la virtual camera
+        }
+        else { transform.GetChild(0).gameObject.SetActive(false); }
     }
 
     protected override void Move()
@@ -42,6 +46,7 @@ public abstract class Hero : Character
 
         if (imLeader)
         {
+            transform.GetChild(0).gameObject.SetActive(true); //Activa el virtual camera para este objeto
             transform.Translate(Vector3.forward * ControlSystem.Axis.magnitude * speed * Time.deltaTime);
 
             if (ControlSystem.Axis != Vector2.zero)
@@ -51,6 +56,7 @@ public abstract class Hero : Character
         }
         else
         {
+            transform.GetChild(0).gameObject.SetActive(false); //Desactiva el virtual camera para este objetivo
             canMoveAsAllie = Vector3.Distance(transform.position, target.position) > 1.2f;
             if (canMoveAsAllie)
             {
